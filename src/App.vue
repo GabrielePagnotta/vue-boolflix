@@ -1,17 +1,33 @@
 <template>
   <div id="app">
+    <!-- header -->
     <HeaderComp />
+    <!-- main pricipale -->
+    <MainBox /> 
   </div>
 </template>
 
 <script>
 import HeaderComp from "./components/header/HeaderComp.vue";
+import MainBox from "./components/main/MainBox.vue"
 
 export default {
   name: 'App',
   components: {
-    HeaderComp
-  }
+    HeaderComp,
+    MainBox,
+  },
+  Data(){
+    return{
+      arraifilm:[],
+    }
+  },
+  mounted(){
+
+  },
+  method:{
+    
+  },
 }
 </script>
 

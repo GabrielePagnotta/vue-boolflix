@@ -1,10 +1,11 @@
 <template>
     <div class="header-main-box flex-config">
         <div class="flex-config bg-color-red">
-            <img class="img-config" src="https://www.giuseppecaprotti.it/2019/wp-content/uploads/Netflix-Logo.png" alt="">
+            <img class="img-config" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1280px-Netflix_2015_logo.svg.png" alt="">
         </div>
         <div>
             <input class="input-config" type="text" placeholder="Cerca...">
+            <button>Cerca</button>
         </div>
         
     </div>
@@ -12,7 +13,7 @@
 
 <script>
     export default {
-        
+        name:"HeaderComp",
     }
 </script>
 
@@ -21,6 +22,7 @@
     width:100%;
     background-color: black;
     color:white;
+    padding:20px;
 }
 
 .flex-config{
@@ -30,19 +32,33 @@
 }
 
 .img-config{
-    width:35%;
+    width:20%;
     margin-left:50px;
+    
+    
+
     
 }
 
 .input-config{
-    height: 40px;
+    height: 50px;
+    font-size: 1.3rem;
     padding-right:100px;
     border: 1px solid red;
     border-radius: 50px;
     background-color: rgb(42, 40, 40);
     
     
+}
+
+button{
+    height:50px;
+    background-color: red;
+    border-radius: 20px;
+    margin-right:50px;
+    margin-left: 10px;
+    padding:10px;
+    font-size: 1.3rem;
 }
 
 
