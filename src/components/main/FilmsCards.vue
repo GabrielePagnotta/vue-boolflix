@@ -3,12 +3,18 @@
             <img :src="`https://image.tmdb.org/t/p/w300${name.poster_path}`" alt="film images"> 
             <div class="title-container flex-config">
                 <h3>
-                    {{name.original_name}}
+                    {{name.original_title}}
+                </h3>
+                <h3>
+                    {{name.title}}
+                </h3>
+                <h3>
+                    {{name.original_language}}
+                </h3>
+                <h3>
+                    {{name.vote_average}}
                 </h3>
                 
-                <h3>
-                    {{name.original_language.toUpperCase()}}
-                </h3>
             </div>
     </div>
     
@@ -26,6 +32,11 @@
         props:{
             name:Object
         },
+        data(){
+            return{
+                linguaggio : "series.original.language"
+            }
+        }
         
     }
 </script>

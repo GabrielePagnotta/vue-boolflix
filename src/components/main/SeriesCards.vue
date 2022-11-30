@@ -1,14 +1,13 @@
 <template>
     <div class="card flex-config">
-            <img :src="`https://image.tmdb.org/t/p/w300${series.poster_path}`" alt="series images"> 
+            <img class="posters" :src="`https://image.tmdb.org/t/p/w300${series.poster_path}`" alt="series images"> 
             <div class="title-container flex-config">
-                <h3>
-                    {{series.original_name}}
-                </h3>
-                
-                <h3>
-                    {{series.original_language.toUpperCase()}}
-                </h3>
+                <h3>{{series.language}}</h3>
+                <h3>{{series.name}}</h3>
+                <h3>{{series.original_name}}</h3>
+                <img class="flag" v-if="linguaggio.includes(series.original_language)" :src="`../../assets/${series.original_language}.svg`" alt="languages">
+                <h3 v-else>{{series.original_language}}</h3>
+                <h3>{{series.vote_average}}</h3>
             </div>
     </div>
     
@@ -22,6 +21,11 @@
         props:{
             series:Object
         },
+        data(){
+            return{
+                linguaggio:["it","en"]
+            }
+        }
         
     }
 </script>
@@ -30,7 +34,7 @@
 
 .card{
     width: calc(100% / 5);
-    height: calc(100% / 2);
+    
     margin-top: 20px;
     
 }
@@ -54,7 +58,7 @@ flex-direction: column;
 
 
 
-img{
+.posters{
     width: 70%;
     height:50%;
     margin-top:50px;
@@ -62,5 +66,10 @@ img{
     border-radius: 20px;
     
 
+}
+
+.flag{
+    width:100px;
+    height:100px;
 }
 </style>

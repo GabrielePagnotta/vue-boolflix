@@ -39,6 +39,7 @@ export default {
       axios.get('https://api.themoviedb.org/3/search/tv?api_key=9ceb8a58ee784657c88b6cb96d573f13&query=' + valoreEmit)
       .then( (response) => {
        this.arraiseries = response.data.results
+       
       })
 
       
@@ -55,6 +56,7 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   input::placeholder { 
   color: white;
+  height:100vh;
   }
 }
 
