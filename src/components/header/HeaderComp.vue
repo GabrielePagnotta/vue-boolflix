@@ -5,7 +5,7 @@
         </div>
         <div>
             <input class="input-config" type="text" placeholder="Cerca..." v-model="value">
-            <button @click="$emit('emitname', value)">Cerca</button>
+            <button  @click="$emit('emitname', value)">Cerca</button>
         </div>
         
     </div>
@@ -19,9 +19,7 @@
                 value:"",
             }
         },
-        computed:{
-            
-        },
+       
        
     }
 </script>

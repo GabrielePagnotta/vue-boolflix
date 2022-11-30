@@ -7,6 +7,10 @@
        <div class="flex-config">
         
         <FilmsCards v-for="(el,index) in get" :key="index" :name="el" />
+        <div class="text-title">
+            <h2>Le mie series:</h2>
+        </div>
+        <SeriesCards v-for="(el,index) in get2" :key="index" :series="el" />
         
     </div> 
     </div>
@@ -14,15 +18,17 @@
 </template>
 
 <script>
-
+import SeriesCards from "../main/SeriesCards.vue"
 import FilmsCards from "../main/FilmsCards.vue"
     export default {
         name:"MainBox",
         props:{
             get: Array,
+            get2:Array,
         },
         components:{
             FilmsCards,
+            SeriesCards,
         },
         
     }
@@ -59,7 +65,7 @@ flex-wrap: wrap;
 
 .bg-main{
     background-color: rgb(32, 32, 32);
-    height: 100%;
+    height: 100vh;
 }
 
 .card-text-box-2{

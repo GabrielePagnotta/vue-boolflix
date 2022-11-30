@@ -1,20 +1,16 @@
 <template>
     <div class="card flex-config">
-            <img :src="`https://image.tmdb.org/t/p/w300${name.poster_path}`" alt="film images"> 
+            <img :src="`https://image.tmdb.org/t/p/w300${series.poster_path}`" alt="series images"> 
             <div class="title-container flex-config">
                 <h3>
-                    {{name.original_name}}
+                    {{series.original_name}}
                 </h3>
                 
                 <h3>
-                    {{name.original_language.toUpperCase()}}
+                    {{series.original_language.toUpperCase()}}
                 </h3>
             </div>
     </div>
-    
-   
-    
-
     
 </template>
 
@@ -22,9 +18,9 @@
 
 
     export default {
-        name:"FilmsCards",
+        name:"SeriesCards",
         props:{
-            name:Object
+            series:Object
         },
         
     }

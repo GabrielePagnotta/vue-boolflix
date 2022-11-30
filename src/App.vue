@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <!-- header -->
-    <HeaderComp  @emitname="searchFilms"/>
+    <HeaderComp  @emitname="searchFilms" />
     <!-- main pricipale -->
-    <MainBox :get="arraifilms" /> 
+    <MainBox :get="arraifilms" :get2="arraiseries" /> 
   </div>
 </template>
 
@@ -22,21 +22,32 @@ export default {
     return{
       
       arraifilms:[],
+      arraiseries:[],
     }
   },
   mounted(){
     this.searchFilms()
+    this.searchSeries()
   },
   methods:{
     searchFilms(valoreEmit){
       axios.get('https://api.themoviedb.org/3/search/movie?api_key=9ceb8a58ee784657c88b6cb96d573f13&query=' + valoreEmit)
       .then( (response) => {
        this.arraifilms = response.data.results
+      });
+
+      axios.get('https://api.themoviedb.org/3/search/tv?api_key=9ceb8a58ee784657c88b6cb96d573f13&query=' + valoreEmit)
+      .then( (response) => {
+       this.arraiseries = response.data.results
       })
+
+      
+    },
+
     },
   
-  },
-}
+  }
+
 </script>
 
 <style lang="scss">
