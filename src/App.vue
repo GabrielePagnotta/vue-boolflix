@@ -1,15 +1,16 @@
 <template>
   <div id="app">
     <!-- header -->
-    <HeaderComp />
+    <HeaderComp  @emitname="searchFilms"/>
     <!-- main pricipale -->
-    <MainBox /> 
+    <MainBox :get="arraifilms" /> 
   </div>
 </template>
 
 <script>
 import HeaderComp from "./components/header/HeaderComp.vue";
 import MainBox from "./components/main/MainBox.vue"
+import axios from "axios"
 
 export default {
   name: 'App',
@@ -17,16 +18,23 @@ export default {
     HeaderComp,
     MainBox,
   },
-  Data(){
+  data(){
     return{
-      arraifilm:[],
+      
+      arraifilms:[],
     }
   },
   mounted(){
-
+    this.searchFilms()
   },
-  method:{
-    
+  methods:{
+    searchFilms(valoreEmit){
+      axios.get('https://api.themoviedb.org/3/search/movie?api_key=9ceb8a58ee784657c88b6cb96d573f13&query=' + valoreEmit)
+      .then( (response) => {
+       this.arraifilms = response.data.results
+      })
+    },
+  
   },
 }
 </script>

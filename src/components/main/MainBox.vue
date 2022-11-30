@@ -6,7 +6,7 @@
         
        <div class="flex-config">
         
-        <FilmsCards v-for="(elem,index) in arraigenerico" :key="index" :name="elem"/>
+        <FilmsCards v-for="(el,index) in get" :key="index" :name="el" />
         
     </div> 
     </div>
@@ -14,32 +14,17 @@
 </template>
 
 <script>
-import axios from"axios"
-import FilmsCards from "./FilmsCards.vue"
+
+import FilmsCards from "../main/FilmsCards.vue"
     export default {
         name:"MainBox",
+        props:{
+            get: Array,
+        },
         components:{
-            FilmsCards
+            FilmsCards,
         },
-        data(){
-
-            return{
-
-                arraigenerico:[]
-            }
-        },
-        mounted(){
-            this.arraicicle()
-        },
-        methods:{
-            arraicicle(){
-                axios.get('https://api.themoviedb.org/3/search/movie?api_key=e99307154c6dfb0b4750f6603256716d&query=harry+potter')
-                .then( (response) => {
-                let arraigenerato = response.data.results
-                 this.arraigenerico = arraigenerato
-                })
-            }
-        }
+        
     }
 </script>
 

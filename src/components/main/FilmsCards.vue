@@ -9,7 +9,7 @@
                     
                 </h3>
                 <h3>
-                    {{name.original_language}}
+                    {{name.original_language.toUpperCase()}}
                 </h3>
             </div>
     </div>
@@ -21,10 +21,17 @@
 </template>
 
 <script>
+
+
     export default {
         name:"FilmsCards",
         props:{
-            name:Object,
+            name:Object
+        },
+        data(){
+            return{
+                
+            }
         }
     }
 </script>

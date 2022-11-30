@@ -4,8 +4,8 @@
             <img class="img-config" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1280px-Netflix_2015_logo.svg.png" alt="">
         </div>
         <div>
-            <input class="input-config" type="text" placeholder="Cerca...">
-            <button>Cerca</button>
+            <input class="input-config" type="text" placeholder="Cerca..." v-model="value">
+            <button @click="$emit('emitname', value)">Cerca</button>
         </div>
         
     </div>
@@ -14,6 +14,15 @@
 <script>
     export default {
         name:"HeaderComp",
+        data(){
+            return{
+                value:"",
+            }
+        },
+        computed:{
+            
+        },
+       
     }
 </script>
 
