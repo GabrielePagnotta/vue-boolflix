@@ -61,7 +61,10 @@
     border-radius: 10px;
     background-color: rgb(168, 16, 16);
     color:white;
-    margin: 20px;  
+    margin: 20px; 
+    border: 5px solid transparent;
+    border-image: 1;
+    background: linear-gradient(to left,#000000, #960202) border-box;
 }
 .flex-config{
 display: flex;
@@ -78,6 +81,9 @@ img{
     margin-top:50px;
     box-shadow: 10px 5px 5px black;
     border-radius: 20px;
+    border: 5px solid transparent;
+    border-image: 1;
+    background: linear-gradient(to left,#181717, #960202) border-box;
     
 
 }

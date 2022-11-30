@@ -54,7 +54,9 @@
     border: 1px solid red;
     border-radius: 50px;
     background-color: rgb(42, 40, 40);
-    
+    border: 1px solid rgb(125, 69, 69);
+    border-image: 1;
+    background: linear-gradient(to left,#000000, #960202) border-box;
     
 }
 
