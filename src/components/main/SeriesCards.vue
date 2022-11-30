@@ -5,9 +5,10 @@
                 <h3>{{series.language}}</h3>
                 <h3>{{series.name}}</h3>
                 <h3>{{series.original_name}}</h3>
-                <img class="flag" v-if="linguaggio.includes(series.original_language)" :src="`../../assets/${series.original_language}.svg`" alt="languages">
+                <img class="flag" v-if="linguaggio.includes(series.original_language)" :src="require(`../../assets/${series.original_language}.svg`)" alt="languages">
                 <h3 v-else>{{series.original_language}}</h3>
                 <h3>{{series.vote_average}}</h3>
+                
             </div>
     </div>
     
@@ -23,7 +24,7 @@
         },
         data(){
             return{
-                linguaggio:["it","en"]
+                linguaggio:["it","en","pl","cn","es","fr","ja","pt","nl","de"]
             }
         }
         
@@ -68,8 +69,17 @@ flex-direction: column;
 
 }
 
+
+img{
+    width: 70%;
+    height:50%;
+    margin-top:50px;
+    box-shadow: 10px 5px 5px black;
+    border-radius: 20px;
+}
 .flag{
-    width:100px;
-    height:100px;
+    margin:10px;
+    width:20%;
+    
 }
 </style>

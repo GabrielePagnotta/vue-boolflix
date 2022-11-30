@@ -8,9 +8,8 @@
                 <h3>
                     {{name.title}}
                 </h3>
-                <h3>
-                    {{name.original_language}}
-                </h3>
+                <img class="flag" v-if="linguaggio2.includes(name.original_language)" :src="require(`../../assets/${name.original_language}.svg`)" alt="languages">
+                <h3 v-else>{{series.original_language}}</h3>
                 <h3>
                     {{name.vote_average}}
                 </h3>
@@ -34,7 +33,7 @@
         },
         data(){
             return{
-                linguaggio : "series.original.language"
+                linguaggio2:["it","en","pl","cn","es","fr","ja","pt","nl","de"]
             }
         }
         
@@ -50,7 +49,11 @@
     
 }
 
-
+.flag{
+    margin:10px;
+    width:20%;
+    
+}
 
 .title-container{
     width: 70%;
