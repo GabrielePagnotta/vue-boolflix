@@ -90,7 +90,7 @@ export default {
 }
 
 h3 {
-    color: white;
+    color: rgb(36, 33, 33);
     font-size: 2rem;
 }
 

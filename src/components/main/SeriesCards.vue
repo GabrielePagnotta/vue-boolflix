@@ -67,6 +67,7 @@
 -moz-filter: blur(5px);
 -o-filter: blur(5px);
 -ms-filter: blur(5px);
+
 }
 
 .card:hover .title-container{
@@ -74,9 +75,6 @@
     opacity: 90%;
 }
 
-
-
- 
 .flag{
     margin:10px 0;
     width:20%;
