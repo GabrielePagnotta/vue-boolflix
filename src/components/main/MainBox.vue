@@ -65,8 +65,7 @@ flex-wrap: wrap;
 
 .bg-main{
     background-color: rgb(32, 32, 32);
-    height: 100%;
-    width: 100vw;
+    width: 100%;
 }
 
 .card-text-box-2{

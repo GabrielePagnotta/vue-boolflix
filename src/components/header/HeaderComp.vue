@@ -1,10 +1,10 @@
 <template>
     <div class="header-main-box flex-config">
         <div class="flex-config bg-color-red">
-            <img class="img-config" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1280px-Netflix_2015_logo.svg.png" alt="">
+            <img class="img-config"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1280px-Netflix_2015_logo.svg.png" alt="">
         </div>
         <div>
-            <input class="input-config" type="text" placeholder="Cerca..." v-model="value">
+            <input class="input-config" style="color:white" type="text" placeholder="Cerca..." v-model="value" @keyup.enter="$emit('emitname', value)">
             <button  @click="$emit('emitname', value)">Cerca</button>
         </div>
         
@@ -41,10 +41,7 @@
 .img-config{
     width:20%;
     margin-left:50px;
-    
-    
-
-    
+    cursor: pointer;
 }
 
 .input-config{
@@ -55,8 +52,7 @@
     border-radius: 50px;
     background-color: rgb(42, 40, 40);
     border: 1px solid rgb(125, 69, 69);
-    border-image: 1;
-    background: linear-gradient(to left,#000000, #960202) border-box;
+   
     
 }
 
