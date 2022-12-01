@@ -80,9 +80,6 @@ export default {
     opacity: 90%;
 }
 
-
-
-
 .flag {
     margin: 10px 0;
     width: 20%;
@@ -90,8 +87,9 @@ export default {
 }
 
 h3 {
-    color: rgb(36, 33, 33);
+    color: rgb(255, 255, 255);
     font-size: 2rem;
+    text-shadow: -1px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
 }
 
 .fa-star {

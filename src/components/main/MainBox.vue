@@ -40,8 +40,6 @@ import FilmsCards from "../main/FilmsCards.vue"
     width: 80%;
     margin:0 auto;
     
-   
-    
 }
 .text-title{
     width:100%;
@@ -61,13 +59,14 @@ align-items: center;
 flex-wrap: wrap;
 background-color: rgb(32, 32, 32);
 
+
 }
 
 
 .bg-main{
     background-color: rgb(32, 32, 32);
     width: 100%;
-    height:100%;
+    height:auto;
 }
 
 .card-text-box-2{
@@ -78,8 +77,5 @@ background-color: rgb(32, 32, 32);
     margin-top:50px;
     background-color: red;
 }
-
-
-
 
 </style>

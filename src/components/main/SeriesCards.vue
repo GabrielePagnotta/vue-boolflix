@@ -85,6 +85,7 @@ h3{
     
     color: white;
     font-size: 2rem;
+    text-shadow: -1px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
 }
 
 .fa-star{
@@ -118,7 +119,6 @@ h3{
 }
 
 .poster{
-    
     width: 80%;
     height:50%;
     margin-top:50px;
