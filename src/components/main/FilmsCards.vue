@@ -13,6 +13,24 @@
                 <h3>
                     {{name.vote_average}}
                 </h3>
+                <div>
+                    <font-awesome-icon v-if="(name.vote_average >2) " icon="fa-solid fa-star" />
+                    <font-awesome-icon v-else icon="fa-regular fa-star" />
+
+                    <font-awesome-icon v-if="(name.vote_average >=4) " icon="fa-solid fa-star" />
+                    <font-awesome-icon v-else icon="fa-regular fa-star" />
+
+                    <font-awesome-icon v-if="(name.vote_average >=6) " icon="fa-solid fa-star" />
+                    <font-awesome-icon v-else icon="fa-regular fa-star" />
+
+                    <font-awesome-icon v-if="(name.vote_average >=8) " icon="fa-solid fa-star" />
+                    <font-awesome-icon v-else icon="fa-regular fa-star" />
+
+                    <font-awesome-icon v-if="(name.vote_average >9) " icon="fa-solid fa-star" />
+                    <font-awesome-icon v-else icon="fa-regular fa-star" />
+                 
+                </div>
+                
                 
             </div>
     </div>
@@ -55,12 +73,20 @@
     
 }
 
+h3{
+    color: white;
+}
+
+.fa-star{
+font-size: 2rem;
+color: yellow;
+}
+
 .title-container{
     width: 70%;
     padding: 10px;
     border-radius: 10px;
     background-color: rgb(168, 16, 16);
-    color:white;
     margin: 20px; 
     border: 5px solid transparent;
     border-image: 1;
@@ -76,14 +102,12 @@ flex-direction: column;
 
 
 img{
-    width: 70%;
+    width: 95%;
     height:50%;
     margin-top:50px;
-    box-shadow: 10px 5px 5px black;
+    box-shadow: 2px black;
     border-radius: 20px;
-    border: 5px solid transparent;
-    border-image: 1;
-    background: linear-gradient(to left,#181717, #960202) border-box;
+    
     
 
 }

@@ -26,7 +26,7 @@
 
 <style lang="scss" scoped>
 .header-main-box{
-    width:100%;
+    width:100vw;
     background-color: black;
     color:white;
     padding:20px;

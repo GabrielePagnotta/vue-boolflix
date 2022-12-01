@@ -8,7 +8,23 @@
                 <img class="flag" v-if="linguaggio.includes(series.original_language)" :src="require(`../../assets/${series.original_language}.svg`)" alt="languages">
                 <h3 v-else>{{series.original_language}}</h3>
                 <h3>{{series.vote_average}}</h3>
-                
+                <div>
+                    <font-awesome-icon v-if="(series.vote_average >2) " icon="fa-solid fa-star" />
+                    <font-awesome-icon v-else icon="fa-regular fa-star" />
+
+                    <font-awesome-icon v-if="(series.vote_average >=4) " icon="fa-solid fa-star" />
+                    <font-awesome-icon v-else icon="fa-regular fa-star" />
+
+                    <font-awesome-icon v-if="(series.vote_average >=6) " icon="fa-solid fa-star" />
+                    <font-awesome-icon v-else icon="fa-regular fa-star" />
+
+                    <font-awesome-icon v-if="(series.vote_average >=8) " icon="fa-solid fa-star" />
+                    <font-awesome-icon v-else icon="fa-regular fa-star" />
+
+                    <font-awesome-icon v-if="(series.vote_average >9) " icon="fa-solid fa-star" />
+                    <font-awesome-icon v-else icon="fa-regular fa-star" />
+                 
+                </div>
             </div>
     </div>
     
@@ -41,7 +57,10 @@
 }
 
 
-
+.fa-star{
+font-size: 2rem;
+color: yellow;
+}
 .title-container{
     width: 70%;
     padding: 10px;
@@ -63,26 +82,16 @@ flex-direction: column;
 
 
 
-.posters{
-    width: 70%;
+
+
+
+img{
+    width: 100%;
     height:50%;
     margin-top:50px;
     box-shadow: 10px 5px 5px black;
     border-radius: 20px;
     
-
-}
-
-
-img{
-    width: 70%;
-    height:50%;
-    margin-top:50px;
-    box-shadow: 10px 5px 5px black;
-    border-radius: 20px;
-    border: 5px solid transparent;
-    border-image: 1;
-    background: linear-gradient(to left,#181717, #960202) border-box;
 }
 .flag{
     margin:10px;
