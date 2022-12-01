@@ -96,7 +96,7 @@ color: yellow;
 
 .title-container{
     visibility: hidden;
-    width: 95%;
+    width: 80%;
     height:90%;
     padding: 10px;
     border-radius: 10px;
@@ -121,7 +121,7 @@ h3{
 
 .poster{
     
-    width: 95%;
+    width: 80%;
     height:50%;
     margin-top:50px;
     box-shadow: 2px black;

@@ -23,11 +23,13 @@ export default {
       
       arraifilms:[],
       arraiseries:[],
+
+      
     }
   },
   mounted(){
     this.searchFilms()
-    this.searchSeries()
+    
   },
   methods:{
     searchFilms(valoreEmit){
@@ -40,7 +42,7 @@ export default {
       .then( (response) => {
        this.arraiseries = response.data.results
        
-      })
+      });
 
       
     },
@@ -56,13 +58,28 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   input::placeholder { 
   color: white;
-  height:100vh;
   }
+  background-color: rgb(32, 32, 32);
+  
 }
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
 }
 </style>
