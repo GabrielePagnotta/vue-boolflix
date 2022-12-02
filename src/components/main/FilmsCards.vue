@@ -1,6 +1,8 @@
 <template>
     <div class="card flex-config">
-        <img class="poster" :src="`https://image.tmdb.org/t/p/w300${name.poster_path}`" alt="film images">
+        <img v-if="name.poster_path == undefined " class="poster" 
+        src="https://www.associazionejam.it/wp-content/uploads/2017/04/non-disponibile-300x300.png" alt="series images"> 
+        <img v-else class="poster" :src="`https://image.tmdb.org/t/p/w300${name.poster_path}`" alt="series images">
         <div class="title-container ">
             <h3>Titolo:</h3>
             <h3>{{ name.original_title }}</h3>

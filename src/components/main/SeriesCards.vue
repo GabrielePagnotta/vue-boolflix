@@ -1,6 +1,7 @@
 <template>
     <div class="card flex-config">
-            <img class="poster" :src="`https://image.tmdb.org/t/p/w300${series.poster_path}`" alt="series images"> 
+            <img v-if="series.poster_path == undefined " class="poster" src="https://www.associazionejam.it/wp-content/uploads/2017/04/non-disponibile-300x300.png" alt="series images"> 
+            <img v-else class="poster" :src="`https://image.tmdb.org/t/p/w300${series.poster_path}`" alt="series images"> 
             <div class="title-container">
                 <h3>Titolo:</h3>
                 <h3>{{series.name}}</h3>
@@ -47,7 +48,8 @@
             return{
                 linguaggio:["it","en","pl","cn","es","fr","ja","pt","nl","de"]
             }
-        }
+        },
+        
         
     }
 </script>
